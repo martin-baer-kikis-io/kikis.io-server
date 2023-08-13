@@ -1,0 +1,9 @@
+C:/Users/marti/Documents/kikis-cpp/CMakeFiles/INSTALL.dir
+C:/Users/marti/Documents/kikis-cpp/CMakeFiles/ALL_BUILD.dir
+C:/Users/marti/Documents/kikis-cpp/CMakeFiles/ZERO_CHECK.dir
+C:/Users/marti/Documents/kikis-cpp/SRC/CMakeFiles/subscriber.dir
+C:/Users/marti/Documents/kikis-cpp/SRC/CMakeFiles/publisher.dir
+C:/Users/marti/Documents/kikis-cpp/SRC/CMakeFiles/examples_parameters.dir
+C:/Users/marti/Documents/kikis-cpp/SRC/CMakeFiles/INSTALL.dir
+C:/Users/marti/Documents/kikis-cpp/SRC/CMakeFiles/caller.dir
+C:/Users/marti/Documents/kikis-cpp/SRC/CMakeFiles/callee.dir

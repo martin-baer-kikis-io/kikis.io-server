@@ -1,0 +1,2 @@
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	LNK2019	unresolved external symbol "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl set_variant_type_name(struct tagVARIANT)" (?set_variant_type_name@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UtagVARIANT@@@Z) referenced in function "void __cdecl set(class std::shared_ptr<class autobahn::wamp_invocation_impl>)" (?set@@YAXV?$shared_ptr@Vwamp_invocation_impl@autobahn@@@std@@@Z)	callee	C:\Users\marti\Documents\kikis-cpp\SRC\set.obj	1	

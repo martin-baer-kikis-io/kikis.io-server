@@ -1,0 +1,11 @@
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/subscriber.dir
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/publisher.dir
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/examples_parameters.dir
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/caller.dir
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/callee.dir
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/provide_prefix.dir
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/wampcra.dir
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/uds.dir
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/websocket_callee.dir
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/ALL_BUILD.dir
+C:/Users/marti/Documents/kikis-cpp/Windows/CMakeFiles/ZERO_CHECK.dir

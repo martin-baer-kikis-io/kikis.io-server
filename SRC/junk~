@@ -1,0 +1,14 @@
+        exit(0);
+    }
+
+
+
+    std::string vt_type_str = get_variant_type_name( varProp );
+
+    std::wcout << "<<<----";
+    std::cout << "Found TYPE VALUE: vt: [" << vt_type_str << "]" << std::endl;
+    std::wcout << "<<<----";
+    std::wcout << L"Looking for value for: [" << prop << L"]\n";
+    std::wcout << "<<<----";
+    std::cout << "Found value: [" << varProp.bstrVal << "]" << std::endl;
+

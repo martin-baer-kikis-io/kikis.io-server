@@ -1,0 +1,15 @@
+
+            hr = pFound->GetCurrentPropertyValue ( propertyId, &varProp );
+            if( FAILED(hr) )
+            {
+                std::cerr << "DEBUG: GetCurrentPropertyValue failed.  Exiting..." << std::endl;
+                exit(0);
+            }
+            std::cerr << "DEBUG: GetCurrentPropertyValue succeeded."  << std::endl;
+    
+            std::wcout << "GetCurrentPropertyValue returned: " << varProp.bstrVal << L"\n";
+
+	    // compare property values
+	    
+            if ( valu == varProp.bstrVal ) {
+            }

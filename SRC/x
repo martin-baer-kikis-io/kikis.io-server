@@ -1,0 +1,1 @@
+            std::string ptmp = widechar2multibyte( prop );

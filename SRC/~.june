@@ -1,0 +1,102 @@
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// set.cpp
+//
+//
+///////////////////////////////////////////////////////////////////////////////
+
+
+#include "utils.h"
+
+
+using namespace std;
+
+IUIAutomation * set_g_pAutomation = NULL;
+
+HRESULT set_InitializeUIAutomation()
+{
+    CoInitialize(NULL);
+    HRESULT hr =
+        CoCreateInstance(__uuidof(CUIAutomation),
+            NULL, CLSCTX_INPROC_SERVER,
+            __uuidof(IUIAutomation),
+            (void**)&set_g_pAutomation);
+    return (hr);
+}
+
+
+
+// set()
+//
+void set( autobahn::wamp_invocation invocation )
+{
+	std::cerr << "Entered com.kikis.set: " << std::endl;
+
+	auto nameString  = invocation->argument<string>(0);
+    //auto message = invocation->argument<string>(1);
+
+	HRESULT                   hr       		= NULL;
+	IUIAutomation 			* pAutomation	= NULL;
+	IUIAutomationElement    * pDesktop 		= NULL;
+	IUIAutomationElement    * pFirst  		= NULL;
+	IUIAutomationTreeWalker * pWalk   		= NULL;
+
+
+
+	// InitializeSetUIAutomation
+	//
+	std::cerr << "DEBUG: Calling InitializeSetUIAutomation() " << std::endl;
+	//hr  = InitializeUIAutomation(&pAutomation);
+	hr  = set_InitializeUIAutomation();
+	if (set_g_pAutomation == NULL) {
+		std::cerr << "DEBUG: pAutomation is NULL. (" <<  std::oct << hr << ")   Exiting..." << std::endl;	
+		std::exit(0);
+	}
+	std::cerr << "DEBUG: pAutomation is not NULL" << std::endl;
+
+
+
+	// GetRootElement
+	//
+	//std::cerr << "DEBUG: calling GetRootElement" << std::endl;
+    //hr = pAutomation->GetRootElement(&pDesktop);
+	//if (pDesktop == NULL) {
+	//	std::cerr << "DEBUG: pDesktop is NULL.  Exiting..." << std::endl;		
+	//	std::exit(0);
+	//}
+	//std::cerr << "DEBUG: pDesktop is not NULL" << std::endl;
+	
+	// get_ControlViewWalker
+	//
+	std::cerr << "DEBUG: calling ControlViewWalker" << std::endl;
+	hr = set_g_pAutomation->get_ControlViewWalker(&pWalk);
+	if ( pWalk == NULL) {
+		std::cerr << "DEBUG: pWalk is NULL. (" << std::oct << hr << ")  Exiting..." << std::endl;	
+		std::exit(0);
+	}
+	std::cerr << "DEBUG: pWalk is not NULL" << std::endl;	
+
+	
+	// GetFirstChildElement
+	//
+	std::cerr << "DEBUG: calling GetFirstChildElement" << std::endl;
+	pWalk->GetFirstChildElement(pDesktop, &pFirst);
+	if (pFirst == NULL) {
+		std::cerr << "DEBUG: pFirst is NULL. (" << std::oct << hr << ")  Exiting..." << std::endl;	
+		std::exit(0);
+	}
+	std::cerr << "DEBUG: pFirst is not NULL" << std::endl;
+	
+	#if 0
+	//  ListDescendants
+	//
+	//std::cerr << "DEBUG: calling ListDescendants() " << std::endl;
+	//ListDescendants( pDesktop, 2, invocation);
+	
+	std::cerr << "DEBUG: returning to main block" << std::endl;
+	
+#endif
+	
+}
+

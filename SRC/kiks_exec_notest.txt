@@ -1,0 +1,167 @@
+
+
+
+UI Automation Element Interfaces for Clients IUIAutomation
+
+IUIAutomation interface
+
+Exposes methods that enable Microsoft UI Automation client applications to discover, access, and filter UI Automation elements. UI Automation exposes every element of the UI Automation as an object represented by the IUIAutomation interface. The members of this interface are not specific to a particular element.
+
+When to implement
+UI Automation client applications do not implement IUIAutomation.
+
+Members
+The IUIAutomation interface inherits from the IUnknown interface. IUIAutomation also has these types of members:
+
+Methods
+Properties
+Methods
+The IUIAutomation interface has these methods.
+
+  
+AddAutomationEventHandler	
+AddFocusChangedEventHandler	
+AddPropertyChangedEventHandler	
+AddPropertyChangedEventHandlerNativeArray	
+AddStructureChangedEventHandler	
+CheckNotSupported	
+CompareElements	
+CompareRuntimeIds	
+CreateAndCondition	
+CreateAndConditionFromArray	
+CreateAndConditionFromNativeArray	
+CreateCacheRequest	
+CreateFalseCondition	
+CreateNotCondition	
+CreateOrCondition	
+CreateOrConditionFromArray	
+CreateOrConditionFromNativeArray	
+CreatePropertyCondition	
+CreatePropertyConditionEx	
+CreateProxyFactoryEntry	
+CreateTreeWalker	
+CreateTrueCondition	
+ElementFromHandle	
+ElementFromHandleBuildCache	
+ElementFromIAccessible	
+ElementFromIAccessibleBuildCache	
+ElementFromPoint	
+ElementFromPointBuildCache	
+GetFocusedElement	
+GetFocusedElementBuildCache	
+GetPatternProgrammaticName	
+GetPropertyProgrammaticName	
+GetRootElement	
+GetRootElementBuildCache	
+IntNativeArrayToSafeArray	
+IntSafeArrayToNativeArray	
+PollForPotentialSupportedPatterns	
+PollForPotentialSupportedProperties	
+RectToVariant	
+RemoveAllEventHandlers	
+RemoveAutomationEventHandler	
+RemoveFocusChangedEventHandler	
+RemovePropertyChangedEventHandler	
+RemoveStructureChangedEventHandler	
+SafeArrayToRectNativeArray	
+VariantToRect	
+
+Properties
+
+The IUIAutomation interface has these properties.
+
+Property	Access type	Description
+ContentViewCondition
+
+Read-only
+
+Retrieves a predefined IUIAutomationCondition interface that selects content elements.
+
+ContentViewWalker
+
+Read-only
+
+Retrieves an IUIAutomationTreeWalker interface used to discover content elements.
+
+ControlViewCondition
+
+Read-only
+
+Retrieves a predefined IUIAutomationCondition interface that selects control elements.
+
+ControlViewWalker
+
+Read-only
+
+Retrieves an IUIAutomationTreeWalker interface used to discover control elements.
+
+ProxyFactoryMapping
+
+Read-only
+
+Retrieves an object that represents the mapping of Window classnames and associated data to individual proxy factories.
+
+RawViewCondition
+
+Read-only
+
+Retrieves a predefined IUIAutomationCondition interface that selects all UI elements in an unfiltered view.
+
+RawViewWalker
+
+Read-only
+
+Retrieves a tree walker object used to traverse an unfiltered view of the UI Automation tree.
+
+ReservedMixedAttributeValue
+
+Read-only
+
+Retrieves a static token object representing a text attribute that is a mixed attribute.
+
+ReservedNotSupportedValue
+
+Read-only
+
+Retrieves a static token object representing a property or text attribute that is not supported.
+
+ 
+
+Remarks
+Every UI Automation client application must obtain this interface to a CUIAutomation object in order to gain access to the functionality of UI Automation.
+
+The following example function creates a CUIAutomation object and obtains the IUIAutomation interface.
+
+
+IUIAutomation *g_pAutomation;
+
+BOOL InitializeUIAutomation()
+{
+    CoInitialize(NULL);
+    HRESULT hr = CoCreateInstance(__uuidof(CUIAutomation), NULL, CLSCTX_INPROC_SERVER, 
+        __uuidof(IUIAutomation), (void**)&g_pAutomation);
+    return (SUCCEEDED(hr));
+}
+
+Requirements
+Minimum supported client
+
+Windows 7, Windows Vista with SP2 and Platform Update for Windows Vista, Windows XP with SP3 and Platform Update for Windows Vista [desktop apps only]
+
+Minimum supported server
+
+Windows Server 2008 R2, Windows Server 2008 with SP2 and Platform Update for Windows Server 2008, Windows Server 2003 with SP2 and Platform Update for Windows Server 2008 [desktop apps only]
+
+Header
+
+UIAutomationClient.h (include UIAutomation.h)
+IDL
+
+UIAutomationClient.idl
+DLL
+
+UIAutomationCore.dll
+IID
+
+IID_IUIAutomation is defined as 30cbe57d-d9d0-452a-ab13-7ac5ac4825ee
+

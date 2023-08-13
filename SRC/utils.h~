@@ -1,0 +1,48 @@
+//
+//  utils.h
+//
+//
+#ifndef KIKIS_UTIL_H
+#define KIKIS_UTIL_H
+
+#include "parameters.hpp"
+
+#include <autobahn/autobahn.hpp>
+#include <boost/asio.hpp>
+#include <boost/version.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include <iostream>
+#include <memory>
+#include <string>
+#include <thread>
+#include <tuple>
+
+#include <windows.h>
+#include <comutil.h>  
+#include <comdef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+#include <ole2.h>
+#include <uiautomation.h>
+
+#pragma comment(lib, "comsuppw.lib") 
+
+#define INPUT_ARRAY_MAX 16
+
+//extern wchar_t*		multibyte2widechar(std::string);
+//extern std::string	widechar2multibyte(wchar_t*);
+
+//extern	std::wstring multibyte2widechar(std::string );
+//extern	std::string widechar2multibyte(std::wstring );
+
+extern	std::string	* get_wstr_input_array ( autobahn::wamp_invocation invocation );
+extern	std::wstring	* wamp_invoke2wchar_array ( autobahn::wamp_invocation invocation );
+extern	void 		  set (autobahn::wamp_invocation invocation);
+extern	void 		  get (autobahn::wamp_invocation invocation);
+extern	PROPERTYID 	  wstring2PROPERTYID ( std::wstring PropName );
+extern	std::string 	  get_variant_type_name ( VARIANT );
+
+
+#endif // KIKIS_UTIL_H

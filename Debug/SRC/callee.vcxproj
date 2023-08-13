@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FBBC0227-76A7-3C7A-9830-E371E4D8C01B}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>callee</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\marti\Documents\kikis-cpp\Debug\SRC\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">callee.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">callee</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\marti\Documents\kikis-cpp\Debug\SRC\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">callee.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">callee</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\marti\Documents\kikis-cpp\Debug\SRC\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">callee.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">callee</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\marti\Documents\kikis-cpp\Debug\SRC\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">callee.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">callee</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BOOST_ALL_NO_LIB;_WIN32_WINNT=0x0501;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BOOST_ALL_NO_LIB;_WIN32_WINNT=0x0501;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Debug\examples_parameters.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_system-vc-mt-sgd-1_65_1.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_thread-vc-mt-sgd-1_65_1.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_program_options-vc-mt-sgd-1_65_1.lib;C:\local\openssl\lib\ssleay32.lib;C:\local\openssl\lib\libeay32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/marti/Documents/Crossbar.git/boost_1_65_1/stage/lib;C:/Users/marti/Documents/Crossbar.git/boost_1_65_1/stage/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marti/Documents/kikis-cpp/Debug/SRC/Debug/callee.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marti/Documents/kikis-cpp/Debug/SRC/Debug/callee.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_WIN32_WINNT=0x0501;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_WIN32_WINNT=0x0501;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Release\examples_parameters.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_system-vc-mt-sgd-1_65_1.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_thread-vc-mt-sgd-1_65_1.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_program_options-vc-mt-sgd-1_65_1.lib;C:\local\openssl\lib\ssleay32.lib;C:\local\openssl\lib\libeay32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/marti/Documents/Crossbar.git/boost_1_65_1/stage/lib;C:/Users/marti/Documents/Crossbar.git/boost_1_65_1/stage/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marti/Documents/kikis-cpp/Debug/SRC/Release/callee.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marti/Documents/kikis-cpp/Debug/SRC/Release/callee.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_WIN32_WINNT=0x0501;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_WIN32_WINNT=0x0501;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>MinSizeRel\examples_parameters.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_system-vc-mt-sgd-1_65_1.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_thread-vc-mt-sgd-1_65_1.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_program_options-vc-mt-sgd-1_65_1.lib;C:\local\openssl\lib\ssleay32.lib;C:\local\openssl\lib\libeay32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/marti/Documents/Crossbar.git/boost_1_65_1/stage/lib;C:/Users/marti/Documents/Crossbar.git/boost_1_65_1/stage/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marti/Documents/kikis-cpp/Debug/SRC/MinSizeRel/callee.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marti/Documents/kikis-cpp/Debug/SRC/MinSizeRel/callee.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_WIN32_WINNT=0x0501;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_WIN32_WINNT=0x0501;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\marti\Documents\Crossbar.git\boost_1_65_1;C:\Users\marti\Documents\Crossbar.git\websocketpp\websocketpp;C:\Users\marti\Documents\kikis-cpp;C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn;C:\local\openssl\include;C:\Users\marti\Documents\Crossbar.git\msgpack-c\msgpack-c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>RelWithDebInfo\examples_parameters.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_system-vc-mt-sgd-1_65_1.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_thread-vc-mt-sgd-1_65_1.lib;C:\Users\marti\Documents\Crossbar.git\boost_1_65_1\stage\lib\libboost_program_options-vc-mt-sgd-1_65_1.lib;C:\local\openssl\lib\ssleay32.lib;C:\local\openssl\lib\libeay32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/marti/Documents/Crossbar.git/boost_1_65_1/stage/lib;C:/Users/marti/Documents/Crossbar.git/boost_1_65_1/stage/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marti/Documents/kikis-cpp/Debug/SRC/RelWithDebInfo/callee.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marti/Documents/kikis-cpp/Debug/SRC/RelWithDebInfo/callee.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marti\Documents\kikis-cpp\SRC\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/marti/Documents/kikis-cpp/SRC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/marti/Documents/kikis-cpp -BC:/Users/marti/Documents/kikis-cpp/Debug --check-stamp-file C:/Users/marti/Documents/kikis-cpp/Debug/SRC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/marti/Documents/kikis-cpp/SRC/CMakeLists.txt;C:\Users\marti\Documents\kikis-cpp\SRC\CMakeLists.txt;C:\Users\marti\Documents\kikis-cpp\SRC\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\marti\Documents\kikis-cpp\Debug\SRC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/marti/Documents/kikis-cpp/SRC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/marti/Documents/kikis-cpp -BC:/Users/marti/Documents/kikis-cpp/Debug --check-stamp-file C:/Users/marti/Documents/kikis-cpp/Debug/SRC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/marti/Documents/kikis-cpp/SRC/CMakeLists.txt;C:\Users\marti\Documents\kikis-cpp\SRC\CMakeLists.txt;C:\Users\marti\Documents\kikis-cpp\SRC\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\marti\Documents\kikis-cpp\Debug\SRC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/marti/Documents/kikis-cpp/SRC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/marti/Documents/kikis-cpp -BC:/Users/marti/Documents/kikis-cpp/Debug --check-stamp-file C:/Users/marti/Documents/kikis-cpp/Debug/SRC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/marti/Documents/kikis-cpp/SRC/CMakeLists.txt;C:\Users\marti\Documents\kikis-cpp\SRC\CMakeLists.txt;C:\Users\marti\Documents\kikis-cpp\SRC\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\marti\Documents\kikis-cpp\Debug\SRC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/marti/Documents/kikis-cpp/SRC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/marti/Documents/kikis-cpp -BC:/Users/marti/Documents/kikis-cpp/Debug --check-stamp-file C:/Users/marti/Documents/kikis-cpp/Debug/SRC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/marti/Documents/kikis-cpp/SRC/CMakeLists.txt;C:\Users\marti\Documents\kikis-cpp\SRC\CMakeLists.txt;C:\Users\marti\Documents\kikis-cpp\SRC\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\marti\Documents\kikis-cpp\Debug\SRC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\marti\Documents\kikis-cpp\SRC\main.cpp"  />
+    <ClCompile Include="C:\Users\marti\Documents\kikis-cpp\SRC\get.cpp"  />
+    <ClCompile Include="C:\Users\marti\Documents\kikis-cpp\SRC\set.cpp"  />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\autobahn.hpp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\boost_config.hpp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\exceptions.hpp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_arguments.hpp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_auth_utils.hpp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_authenticate.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_authenticate.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call_options.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call_options.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call_result.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call_result.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_challenge.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_challenge.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_event.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_event.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_event_handler.hpp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_invocation.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_invocation.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_message.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_message.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_message_type.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_message_type.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_procedure.hpp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_publication.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_publication.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_rawsocket_transport.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_rawsocket_transport.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_register_request.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_register_request.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_registration.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_registration.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_transport.hpp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_transport_handler.hpp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_session.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_session.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscribe_options.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscribe_options.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscribe_request.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscribe_request.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscription.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscription.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_tcp_transport.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_tcp_transport.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_uds_transport.hpp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_unregister_request.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_unregister_request.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_unsubscribe_request.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_unsubscribe_request.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_websocket_transport.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_websocket_transport.ipp" />
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_websocketpp_websocket_transport.hpp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_websocketpp_websocket_transport.ipp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\marti\Documents\kikis-cpp\Debug\ZERO_CHECK.vcxproj">
+      <Project>{E42C198E-4AA2-36DB-B9AF-452E8D10557C}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marti\Documents\kikis-cpp\Debug\SRC\examples_parameters.vcxproj">
+      <Project>{E45789A0-3D16-3F24-AAF2-66155BD905BB}</Project>
+      <Name>examples_parameters</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,116 @@
+
+PROPERTYID wstring2PROPERTYID ( std::wstring PropName ) {
+
+    if ( PropName == L"UIA_AcceleratorKeyProperty" ) 
+        return 30006;
+    if ( PropName == L"UIA_AccessKeyProperty" )
+        return 30007;
+    if ( PropName == L"UIA_AnnotationObjectsProperty" ) 
+        return 30156;
+    if ( PropName == L"UIA_AnnotationTypesProperty" ) 
+        return 30155;
+    if ( PropName == L"UIA_AriaPropertiesProperty" ) 
+        return 30102;
+    if ( PropName == L"UIA_AriaRoleProperty" ) 
+        return 30101;
+    if ( PropName == L"UIA_AutomationProperty" ) 
+        return 30011;
+    if ( PropName == L"UIA_BoundingRectangleProperty" ) 
+        return 30001;
+    if ( PropName == L"UIA_CenterPointProperty" ) 
+        return 30165;
+    if ( PropName == L"UIA_ClassNameProperty" ) 
+        return 30012;
+    if ( PropName == L"UIA_ClickablePointProperty" ) 
+        return 30014;
+    if ( PropName == L"UIA_ControllerForProperty" ) 
+        return 30104;
+    if ( PropName == L"UIA_ControlTypeProperty" ) 
+        return 30003;
+    if ( PropName == L"UIA_CultureProperty" ) 
+        return 30015;
+    if ( PropName == L"UIA_DescribedByProperty" ) 
+        return 30105;
+    if ( PropName == L"UIA_FillColorProperty" ) 
+        return 30160;
+    if ( PropName == L"UIA_FillTypeProperty" ) 
+        return 30162;
+    if ( PropName == L"UIA_FlowsFromProperty" ) 
+        return 30148;
+    if ( PropName == L"UIA_FlowsToProperty" ) 
+        return 30106;
+    if ( PropName == L"UIA_FrameworkProperty" )
+        return 30024;
+    if ( PropName == L"UIA_FullDescriptionProperty" ) 
+        return 30159;
+    if ( PropName == L"UIA_HasKeyboardFocusProperty" ) 
+        return 30008;
+    if ( PropName == L"UIA_HeadingLevelProperty" ) 
+        return 30173;
+    if ( PropName == L"UIA_HelpTextProperty" ) 
+        return 30013;
+    if ( PropName == L"UIA_IsContentElementProperty" ) 
+        return 30017;
+    if ( PropName == L"UIA_IsControlElementProperty" ) 
+        return 30016;
+    if ( PropName == L"UIA_IsDataValidForFormProperty" ) 
+        return 30103;
+    if ( PropName == L"UIA_IsEnabledProperty" ) 
+        return 30010;
+    if ( PropName == L"UIA_IsKeyboardFocusableProperty" ) 
+        return 30009;
+    if ( PropName == L"UIA_IsOffscreenProperty" ) 
+        return 30022;
+    if ( PropName == L"UIA_IsPasswordProperty" ) 
+        return 30019;
+    if ( PropName == L"UIA_IsPeripheralProperty" ) 
+        return 30150;
+    if ( PropName == L"UIA_IsRequiredForFormProperty" ) 
+        return 30025;
+    if ( PropName == L"UIA_ItemStatusProperty" ) 
+        return 30026;
+    if ( PropName == L"UIA_ItemTypeProperty" ) 
+        return 300021;
+    if ( PropName == L"UIA_LabeledByProperty" ) 
+        return 30018;
+    if ( PropName == L"UIA_LandmarkTypeProperty" ) 
+        return 30157;
+    if ( PropName == L"UIA_LevelProperty" ) 
+        return 30154;
+    if ( PropName == L"UIA_LiveSettingProperty" ) 
+        return 30135;
+    if ( PropName == L"UIA_LocalizedControlTypeProperty" ) 
+        return 30004;
+    if ( PropName == L"UIA_LocalizedLandmarkTypeProperty" ) 
+        return 30158;
+    if ( PropName == L"UIA_NameProperty" ) 
+        return 30005;
+    if ( PropName == L"UIA_NativeWindowHandleProperty" ) 
+        return 30020;
+    if ( PropName == L"UIA_OptimizeForVisualContentProperty" ) 
+        return 30111;
+    if ( PropName == L"UIA_OrientationProperty" ) 
+        return 300023;
+    if ( PropName == L"UIA_OutlineColorProperty" ) 
+        return 30161;
+    if ( PropName == L"UIA_OutlineThicknessProperty" ) 
+        return 30164;
+    if ( PropName == L"UIA_PositionInSetProperty" ) 
+        return 30152;
+    if ( PropName == L"UIA_ProcessProperty" ) 
+        return 30002;
+    if ( PropName == L"UIA_ProviderDescriptionProperty" ) 
+        return 30107;
+    if ( PropName == L"UIA_RotationProperty" ) 
+        return 30166;
+    if ( PropName == L"UIA_RuntimeProperty" ) 
+        return 30000;
+    if ( PropName == L"UIA_SizeProperty" ) 
+        return 30167;
+    if ( PropName == L"UIA_SizeOfSetProperty" ) 
+        return 30153;
+    if ( PropName == L"UIA_VisualEffectsProperty" ) 
+        return 30163;
+
+    return NULL;
+}

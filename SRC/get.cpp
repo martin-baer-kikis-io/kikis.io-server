@@ -1,0 +1,198 @@
+
+    
+/*--------------------------------------------------------------------------------
+
+
+        get.cpp
+
+
+/*--------------------------------------------------------------------------------*/
+
+
+#include "utils.h"
+
+#define INPUT_ARRAY_MAX 16
+
+extern std::wstring * wamp_invoke2wchar_array ( autobahn::wamp_invocation invocation );
+extern IUIAutomationElement * hopToNode( IUIAutomation*, autobahn::wamp_invocation, std::wstring*);
+
+extern std::string  widechar2multibyte( std::wstring );
+extern std::wstring multibyte2widechar( std::string );
+extern std::string  get_variant_type_name( VARIANT );
+
+    
+/*--------------------------------------------------------------------------------*/
+
+
+// global IUI pointer and it's init routine
+//
+
+IUIAutomation * g_pAutomation = NULL;
+
+
+HRESULT InitializeUIAutomation()
+{
+    CoInitialize(NULL);
+    HRESULT hr =
+        CoCreateInstance(__uuidof(CUIAutomation),
+            NULL, CLSCTX_INPROC_SERVER,
+            __uuidof(IUIAutomation),
+            (void**)&g_pAutomation);
+    return (hr);
+}
+
+    
+/*--------------------------------------------------------------------------------*/
+
+
+// get()
+//
+
+
+/*--------------------------------------------------------------------------------*/
+
+void get( autobahn::wamp_invocation invocation )
+{
+
+    std::wstring            * input_array     = NULL;
+    IUIAutomationElement    * pFound          = NULL;
+    IUIAutomationTreeWalker * pControlWalker  = NULL;
+    VARIANT                   varProp;
+    std::string               ret_str;
+
+    
+// Prepare the input array
+
+    input_array = wamp_invoke2wchar_array ( invocation );
+    if (input_array == NULL) {
+        std::cerr << "wamp_invoke2wchar_array failed.  Exiting..." << std::endl;
+        exit(0);
+    }
+    
+// Initialize the UIA object
+    
+    HRESULT hr  = InitializeUIAutomation();
+    if (FAILED(hr)) {
+        std::cerr << "InitializeUIAutomation failed.  Exiting..." << std::endl;
+        exit(0);
+    }
+
+// hop to the node with the value one wishes to get
+    
+    pFound = hopToNode( g_pAutomation, invocation, input_array );
+
+    std::cerr << "Back from hopToNode()." << std::endl;
+
+    std::wstring inst     = L"";
+    std::wstring prop     = L"";
+
+
+    if ( pFound == NULL )
+    {
+        std::cerr << "DEBUG: hopToNode returned an empty pointer. Exiting..." << std::endl;
+	exit(0);
+    }
+
+    std::cerr << "entering for loop" << std::endl;
+    for ( unsigned i = 0; i < INPUT_ARRAY_MAX; )
+    {
+        inst = input_array[i++];
+        prop = input_array[i++];
+
+        std::wcout << L"inst: " << inst << L"\n";
+        std::wcout << L"prop: " << prop << L"\n";
+
+        if ( inst == multibyte2widechar ( "get" )) {
+            std::cerr << "Found get instruction, breaking out of loop" << std::endl;
+            break;
+        }
+    }
+
+    if ( inst != multibyte2widechar ( "get" ))
+    {
+        std::cerr << "DEBUG: could not find a \"get\" instruction in argument array. Exiting..." << std::endl;
+	exit(0);
+    }
+
+    // get the value for the property
+
+    PROPERTYID propertyId = wstring2PROPERTYID( prop );
+    std::wcout << L"prop: " << prop << std::endl;
+    std::cerr << "propertyId: " << propertyId << std::endl;
+
+    hr = pFound->GetCurrentPropertyValue ( propertyId, &varProp);
+    if( FAILED(hr) )
+    {
+        std::cerr << "DEBUG: GetCurrentPropertyValue failed.  Exiting..." << std::endl;
+        exit(0);
+    }
+
+    std::string vt_type_str = get_variant_type_name( varProp );
+
+    std::wcout << "<<<----";
+    std::cout << "Found TYPE VALUE: vt: [" << vt_type_str << "]" << std::endl;
+    std::wcout << "<<<----";
+    std::wcout << L"Looking for value for: [" << prop << L"]\n";
+    std::wcout << "<<<----";
+
+    std::wcout << "<<<----";
+    std::cerr << "Assigning value to ret_str..." << std::endl;
+
+    if ( vt_type_str == "VT_BOOL" ) {
+
+	int bval = varProp.boolVal;
+        std::cout << "Found value: [" << bval << "]" << std::endl;
+
+        std::wcout << "varProp.boolVal: "<< bval <<std::endl;
+	if ( bval == VARIANT_FALSE ) {
+	    ret_str = "FALSE";
+        }
+	else if ( bval == VARIANT_TRUE )
+       	{
+	    ret_str = "TRUE";
+	} else {
+	    ret_str = "Unable to determine VARIANT_BOOL value." ;
+        }
+
+        std::cout << "ret_str: [" << ret_str << "]\n";
+        invocation->result(std::make_tuple( ret_str ));
+        std::wcout << L"Exiting...\n";
+	exit(0);
+    }
+
+
+    BSTR wstring = varProp.bstrVal;
+
+    std::cout << "wstring: [" << wstring << "]\n";
+    std::cout << "calling widechar2multibyte..." << "\n";
+
+    ret_str = widechar2multibyte( wstring );
+
+    std::cout << "back from calling widechar2multibyte..." << "\n";
+    std::cout << "ret_str: [" << ret_str << "]\n";
+
+    std::wcout << L"Exiting...\n";
+
+
+//exit(0);
+
+    //std::string ret_str = widechar2multibyte( varProp.bstrVal );
+    //std::string ret_str = multibyte2widechar ( varProp.bstrVal );
+    //
+    //std::string ret_str = bstr2str( varProp.bstrVal );
+
+    std::wcout << "<<<----";
+    //std::cout << "Assigned value to ret_str = " << ret_str << "\n";
+    //std::cout << "Assigned value to ret_str = " << ret_str << "\n";
+
+//exit(0);
+
+    //std::cerr << "DEBUG: calling invocation with ret_str = " << ret_str << std::endl;
+    invocation->result(std::make_tuple( widechar2multibyte( varProp.bstrVal )));
+    
+    std::cerr << "DEBUG: after the call to invocation->result." << std::endl;
+
+    exit(0);
+
+}
+

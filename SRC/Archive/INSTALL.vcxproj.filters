@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marti\Documents\kikis-cpp\CMakeFiles\aab16f36aefc42d17f6c37bb726b01e4\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3715C02B-FB55-31B4-AFD9-EBC05BB29123}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

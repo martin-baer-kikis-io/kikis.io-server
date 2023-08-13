@@ -1,0 +1,36 @@
+
+set(AUTO_EX_DIR C:/Users/marti/Documents/Crossbar.git/autobahn-cpp/examples)
+
+
+set(PARAMETERS_SOURCES ${AUTO_EX_DIR}/parameters.cpp)
+set(PARAMETERS_HEADERS  ${AUTO_EX_DIR}/parameters.hpp)
+add_library(examples_parameters ${PARAMETERS_SOURCES} ${PARAMETERS_HEADERS})
+
+set(CALLER_SOURCES caller.cpp)
+#set(CALLEE_SOURCES callee.cpp add.cpp long_op.cpp walk_tree_from_root.cpp main.cpp kikis_exec.cpp)
+set(CALLEE_SOURCES main.cpp get.cpp set.cpp utils.cpp)
+#set(PROVIDE_PREFIX_SOURCES callee.cpp)
+set(PUBLISHER_SOURCES publisher.cpp)
+set(SUBSCRIBER_SOURCES subscriber.cpp)
+#set(WAMPCRA_SOURCES ${AUTO_EX_DIR}/wampcra.cpp)
+#set(UDS_SOURCES ${AUTO_EX_DIR}/uds.cpp)
+#set(WEBSOCKET_CALLEE_SOURCES ${AUTO_EX_DIR}/websocket_callee.cpp)
+
+add_executable(caller ${CALLER_SOURCES} ${PUBLIC_HEADERS})
+add_executable(callee ${CALLEE_SOURCES} ${PUBLIC_HEADERS})
+#add_executable(provide_prefix ${PROVIDE_PREFIX_SOURCES} ${PUBLIC_HEADERS})
+add_executable(publisher ${PUBLISHER_SOURCES} ${PUBLIC_HEADERS})
+add_executable(subscriber ${SUBSCRIBER_SOURCES} ${PUBLIC_HEADERS})
+#add_executable(wampcra ${WAMPCRA_SOURCES} ${PUBLIC_HEADERS})
+#add_executable(uds ${UDS_SOURCES} ${PUBLIC_HEADERS})
+#add_executable(websocket_callee ${WEBSOCKET_CALLEE_SOURCES} ${PUBLIC_HEADERS})
+
+target_link_libraries(caller examples_parameters autobahn_cpp)
+target_link_libraries(callee examples_parameters autobahn_cpp)
+#target_link_libraries(provide_prefix examples_parameters autobahn_cpp)
+target_link_libraries(publisher examples_parameters autobahn_cpp)
+target_link_libraries(subscriber examples_parameters autobahn_cpp)
+#target_link_libraries(wampcra examples_parameters crypto autobahn_cpp)
+#target_link_libraries(wampcra examples_parameters autobahn_cpp)
+#target_link_libraries(uds examples_parameters autobahn_cpp)
+#target_link_libraries(websocket_callee examples_parameters autobahn_cpp)

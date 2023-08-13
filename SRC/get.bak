@@ -1,0 +1,308 @@
+	
+/*--------------------------------------------------------------------------------
+
+
+		get.cpp
+
+
+--------------------------------------------------------------------------------*/
+
+#include "utils.h"
+
+extern std::wstring * wamp_invoke2wchar_array ( autobahn::wamp_invocation invocation );
+
+	
+/*--------------------------------------------------------------------------------*/
+
+
+// initialize global pointer g_pAutomation
+//
+
+IUIAutomation * g_pAutomation = NULL;
+
+
+HRESULT InitializeUIAutomation()
+{
+    CoInitialize(NULL);
+    HRESULT hr =
+        CoCreateInstance(__uuidof(CUIAutomation),
+            NULL, CLSCTX_INPROC_SERVER,
+            __uuidof(IUIAutomation),
+            (void**)&g_pAutomation);
+    return (hr);
+}
+	
+/*--------------------------------------------------------------------------------*/
+
+
+//			get() - this code implements 'com.kikis.get'
+//
+
+void get( autobahn::wamp_invocation invocation )
+{
+	std::cerr << "calling get_wstr_input_array" << std::endl;
+		std::cerr << "calling get_wstr_input_array" << std::endl;
+	
+	std::wstring * input_array = wamp_invoke2wchar_array ( invocation );
+	
+	//std::string * input_array;
+	
+	//input_array = &invocation->argument<std::string>(0);
+	//input_array = invocation->argument;
+	
+	//std::cerr << "DEBUG: method("	<< input_array[0] << ")" << std::endl;  
+	//std::cerr << "DEBUG:  nav1("	<< input_array[1] << ")" << std::endl;  
+	//std::cerr << "DEBUG:  nav2("	<< input_array[2] << ")" << std::endl;
+	
+exit(0);
+
+	std::string method		= invocation->argument<std::string>(0);
+	std::string nav1		= invocation->argument<std::string>(1);
+	std::string nav2		= invocation->argument<std::string>(2);
+	std::string nav3		= invocation->argument<std::string>(3);
+	std::string nav4		= invocation->argument<std::string>(4);
+	std::string nav5		= invocation->argument<std::string>(5);
+	std::string nav6		= invocation->argument<std::string>(6);
+	std::string nav7		= invocation->argument<std::string>(7);
+	std::string nav8		= invocation->argument<std::string>(8);
+	
+	std::cerr << "DEBUG: entered method(" << method << ")" << std::endl;  
+	std::cerr << "DEBUG: entered nav1(" << nav1 << ")" << std::endl;  
+	std::cerr << "DEBUG: entered nav2(" << nav2 << ")" << std::endl;
+	std::cerr << "DEBUG: entered nav3(" << nav3 << ")" << std::endl;
+	std::cerr << "DEBUG: entered nav4(" << nav4 << ")" << std::endl;
+	std::cerr << "DEBUG: entered nav5(" << nav5 << ")" << std::endl;  
+	std::cerr << "DEBUG: entered nav6(" << nav6 << ")" << std::endl;
+	std::cerr << "DEBUG: entered nav7(" << nav7 << ")" << std::endl;
+	std::cerr << "DEBUG: entered nav8(" << nav8 << ")" << std::endl;
+	
+/*--------------------------------------------------------------------------------*/
+
+	std::cerr << "initializing Data" << std::endl;
+	
+	IUIAutomation 			* 	pAutomation		= NULL;
+    IUIAutomationElement	* 	pRoot 			= NULL;
+    IUIAutomationElement	* 	pFound 			= NULL;
+	IUIAutomationCondition	* 	pCondition 		= NULL;
+	HRESULT                   	hr       		= NULL;		
+	LPWSTR 						searchString 	= NULL;
+	IUIAutomationTreeWalker	* 	pControlWalker	= NULL;
+    IUIAutomationElement	*	pNode			= NULL;
+	IUIAutomationElement	*	pNext			= NULL;
+	int							indent			= 0;
+	
+	std::wstring 				wstr			= L"Wide String";
+	std::string 				ret_str         = "Nothing Found";
+	std::string 				msg				= "";
+	BSTR						desc			= NULL;
+	
+	std::cerr << "Done initializing Data" << std::endl;
+	
+/*--------------------------------------------------------------------------------*/
+
+	// prepare input string
+	//
+	if (nav2.c_str() == NULL)
+    {
+		msg = "nav2 is NULL..  Exiting...";
+		std::cerr << "DEBUG: " << msg << std::endl;
+		goto cleanup;
+    }
+	msg = "nav2 is Not NULL";
+	std::cerr << msg << std::endl;
+
+	std::cerr << "Calling multibyte2widechar" << std::endl;
+	wstr = multibyte2widechar( nav2 );
+	std::cerr << "Back from calling multibyte2widechar" << std::endl;
+
+	VARIANT varProp;
+    varProp.vt = VT_BSTR;
+    varProp.bstrVal = SysAllocString(wstr.c_str());
+	
+    if (varProp.bstrVal == NULL)
+    {
+		msg = "varProp.bstrVal is NULL.  Exiting...";
+		std::cerr << "DEBUG: " << msg << std::endl;
+		goto cleanup;
+
+    }
+	std::cerr << "varProp.bstrVal is Not NULL." << std::endl;
+
+	std::cerr << "Done initializing Data" << std::endl;
+	
+/*--------------------------------------------------------------------------------*/
+
+	
+	// InitializeUIAutomation
+	//
+	std::cerr << "DEBUG: Calling InitializeUIAutomation() " << std::endl;
+	hr  = InitializeUIAutomation();
+	if (FAILED(hr)) {
+		msg = "InitializeUIAutomation failed.  Exiting...";
+		std::cerr << "DEBUG: " << msg << std::endl;
+		goto cleanup;		
+	}
+	msg	= "InitializeUIAutomation returns S_OK";
+	std::cerr << "DEBUG: " << msg << std::endl;
+
+/*--------------------------------------------------------------------------------*/
+
+	// GetRootElement
+	//
+	msg	= "calling GetRootElement";
+	std::cerr << "DEBUG: " << msg << std::endl;
+
+
+    hr = g_pAutomation->GetRootElement(&pRoot);
+    if (FAILED(hr)) {
+		msg = "GetRootElement Failed.  Exiting";
+		std::cerr << "DEBUG: " << msg << std::endl;
+		goto cleanup;	
+	}
+	msg = "pRoot is not NULL";
+	std::cerr << "DEBUG: " << msg << std::endl;
+
+ /*--------------------------------------------------------------------------------*/
+	
+
+	// get_ControlViewWalker
+	//
+
+	std::cerr << "DEBUG: calling get_ControlViewWalker" << std::endl;
+    g_pAutomation->get_ControlViewWalker(&pControlWalker);
+	if ( pControlWalker == NULL ) {
+		msg = "pControlWalker is NULL. Exiting...";
+		std::cerr << "DEBUG: " << msg << std::endl;
+		goto cleanup;
+	}
+	std::cerr << "DEBUG: pControlWalker is not NULL." << std::endl;
+	
+/*--------------------------------------------------------------------------------*/
+	
+    // Get a top-level element by name
+	//
+	std::cerr << "DEBUG: calling CreatePropertyCondition" << std::endl;	
+    hr = g_pAutomation->CreatePropertyCondition(UIA_NamePropertyId, varProp, &pCondition);
+    //if (FAILED(hr)) {
+	if ( pCondition == NULL) {
+		msg = "pCondition is NULL. Exiting...";
+		std::cerr << "DEBUG: " << msg << std::endl;
+		goto cleanup;
+	}
+	msg = "pCondition is NOT NULL...";
+	std::cerr << "DEBUG: " << msg << std::endl;
+	
+	std::cerr << "DEBUG: calling get_ControlViewWalker" << std::endl;
+    g_pAutomation->get_ControlViewWalker(&pControlWalker);
+    if (pControlWalker == NULL) {
+		msg = "get_ControlViewWalker failed. Exiting...";
+		std::cerr << "DEBUG: " << msg << std::endl;
+		goto cleanup;
+	}
+	msg = "pControlWalker is NOT NULL.";
+	std::cerr << "DEBUG: " << msg << std::endl;
+
+	std::cerr << "DEBUG: calling GetFirstChildElement" << std::endl;
+    pControlWalker->GetFirstChildElement(pRoot, &pNode);
+    if (pNode == NULL) {
+		msg = "GetFirstChildElement failed. Exiting...";
+		std::cerr << "DEBUG: " << msg << std::endl;
+		goto cleanup;
+	}
+	msg = "pNode is NOT NULL.";
+	std::cerr << "DEBUG: " << msg << std::endl;
+
+
+	msg = "testing  get_CurrentLocalizedControlType";
+	std::cerr << "DEBUG: " << msg << std::endl;
+
+	
+	if ( nav4 == "CurrentLocalizedControlType" ) {
+		
+		msg = "calling get_CurrentLocalizedControlType with pNode...";
+		std::cerr << "DEBUG: " << msg << nav4 << std::endl;
+
+		pNode->get_CurrentLocalizedControlType(&desc);
+		if ( desc == NULL ) {
+			msg = "get_CurrentLocalizedControlType failed. Exiting...";
+			std::cerr << "DEBUG: " << msg << std::endl;
+			goto cleanup;	
+		}
+		msg = "desc is NOT NULL.";
+		std::cerr << "DEBUG: " << msg << std::endl;
+		
+		msg = "printing desc...";
+	
+		std::cerr << "DEBUG: " << msg << std::endl;
+		std::wcout << L"   ";
+		std::wcout << desc << L"\n";
+
+		msg = "releasing pNode...";
+		std::cerr << "DEBUG: " << msg << std::endl;
+	}
+	
+
+
+/*--------------------------------------------------------------------------------*/
+	
+	// prep return value
+	//
+
+#if 0
+
+	hr = pFound->GetCurrentPropertyValue ( TreeScope_Children, &varProp );
+
+	if (varProp.bstrVal == NULL)
+    {
+		msg = "varProp.bstrVal is NULL.  Exiting...";
+		std::cerr << "DEBUG: " << msg << std::endl;
+		goto cleanup;
+
+    }
+	std::cerr << "DEBUG: calling widechar2multibyte" << std::endl;	
+	ret_str = widechar2multibyte(varProp.bstrVal);
+	
+#endif
+
+	msg = "assigning desc to ret_str.";
+	std::cerr << "DEBUG: " << msg << std::endl;
+	
+	msg = "calling widechar2multibyte.";
+	std::cerr << "DEBUG: " << msg << std::endl;
+	
+	
+	
+	msg = "Back from calling widechar2multibyte.";
+	std::cerr << "DEBUG: " << msg << std::endl;
+
+		
+/*--------------------------------------------------------------------------------*/
+
+
+cleanup:
+
+
+    if (pRoot != NULL)
+        pRoot->Release();
+
+    if (pCondition != NULL)
+        pCondition->Release();
+	
+	if (desc != NULL)
+		SysFreeString(desc);
+	
+//	if (pNode != NULL)	
+//		pNode->Release();
+	
+//	if (varProp != NULL)
+//		VariantClear(&varProp);
+
+	std::cerr << "DEBUG: calling invocation with ret_str = " << ret_str << std::endl;
+	invocation->result(std::make_tuple(ret_str));
+	
+	
+	std::cerr << "DEBUG: after the call to invocation->result." << std::endl;
+
+}	
+	
+

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\marti\Documents\kikis-cpp\SRC\caller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\autobahn.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\boost_config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\exceptions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_arguments.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_auth_utils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_authenticate.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call_options.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call_result.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_challenge.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_event.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_event_handler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_invocation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_message.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_message_type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_procedure.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_publication.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_rawsocket_transport.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_register_request.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_registration.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_transport.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_transport_handler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_session.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscribe_options.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscribe_request.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscription.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_tcp_transport.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_uds_transport.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_unregister_request.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_unsubscribe_request.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_websocket_transport.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_websocketpp_websocket_transport.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marti\Documents\kikis-cpp\SRC\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_authenticate.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call_options.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_call_result.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_challenge.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_event.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_invocation.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_message.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_message_type.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_publication.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_rawsocket_transport.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_register_request.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_registration.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_session.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscribe_options.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscribe_request.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_subscription.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_tcp_transport.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_unregister_request.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_unsubscribe_request.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_websocket_transport.ipp" />
+    <None Include="C:\Users\marti\Documents\Crossbar.git\autobahn-cpp\autobahn\wamp_websocketpp_websocket_transport.ipp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1FA68E3C-9885-3FE0-884E-F566718AE9B9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0FD6FC75-4B58-3FF4-8196-AAB74E771246}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,53 @@
+// returns string of the variant vt type
+//
+std::string get_variant_type_name ( VARIANT varProp  ) {
+
+   int vt = varProp.vt; 
+
+    if ( vt == VT_EMPTY  )              return "VT_EMPTY";
+    if ( vt == VT_NULL )                return "VT_NULL";
+    if ( vt == VT_I2 )                  return "VT_I2";
+    if ( vt == VT_I4 )                  return "VT_I4";
+    if ( vt == VT_R4 )                  return "VT_R4";
+    if ( vt == VT_R8 )                  return "VT_R8";
+    if ( vt == VT_CY )                  return "VT_CY";
+    if ( vt == VT_DATE )                return "VT_DATE";
+    if ( vt == VT_BSTR )                return "VT_BSTR";
+    if ( vt == VT_DISPATCH )            return "VT_DISPATCH";
+    if ( vt == VT_ERROR )               return "VT_ERROR";
+    if ( vt == VT_BOOL )                return "VT_BOOL";
+    if ( vt == VT_BYREF )               return "VT_BYREF";
+    if ( vt == VT_UNKNOWN )             return "VT_UNKNOWN";
+    if ( vt == VT_DECIMAL )             return "VT_DECIMAL";
+    if ( vt == VT_I1 )                  return "VT_I1";
+    if ( vt == VT_UI1 )                 return "VT_UI1";
+    if ( vt == VT_UI2 )                 return "VT_UI2";
+    if ( vt == VT_UI4 )                 return "VT_UI4";
+    if ( vt == VT_I8 )                  return "VT_I8";
+    if ( vt == VT_UI8 )                 return "VT_UI8";
+    if ( vt == VT_I4 )                  return "VT_I4";
+    if ( vt == VT_UI4 )                 return "VT_UI4";
+    if ( vt == VT_VOID )                return "VT_VOID";
+    if ( vt == VT_HRESULT )             return "VT_HRESULT";
+    if ( vt == VT_PTR )                 return "VT_PTR";
+    if ( vt == VT_SAFEARRAY )           return "VT_SAFEARRAY";
+    if ( vt == VT_CARRAY )              return "VT_CARRAY";
+    if ( vt == VT_USERDEFINED )         return "VT_USERDEFINED";
+    if ( vt == VT_LPSTR )               return "VT_LPSTR";
+    if ( vt == VT_LPWSTR )              return "VT_LPWSTR";
+    if ( vt == VT_RECORD )              return "VT_RECORD";
+    if ( vt == VT_FILETIME )            return "VT_FILETIME";
+    if ( vt == VT_BLOB )                return "VT_BLOB";
+    if ( vt == VT_STREAM )              return "VT_STREAM";
+    if ( vt == VT_STORAGE )             return "VT_STORAGE";
+    if ( vt == VT_STREAMED_OBJECT )     return "VT_STREAMED_OBJECT";
+    if ( vt == VT_STORED_OBJECT )       return "VT_STORED_OBJECT";
+    if ( vt == VT_BLOB_OBJECT )         return "VT_BLOB_OBJECT";
+    if ( vt == VT_CF )                  return "VT_CF";
+    if ( vt == VT_CLSID )               return "VT_CLSID";
+    if ( vt == VT_VECTOR )              return "VT_VECTOR";
+    if ( vt == VT_ARRAY )               return "VT_ARRAY";
+    if ( vt == VT_BYREF )               return "VT_BYREF";
+
+    return "No Match";
+}
